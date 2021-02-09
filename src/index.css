@@ -51,18 +51,25 @@ body {
   margin: 10px;
 }
 
+.main-control {
+  display: flex;
+  justify-content: space-around;
+}
+
 button {
-  padding: 5px 20px;
+  padding: 5px 15px;
   outline: none;
   border-radius: 5px;
   border-style: none;
   cursor: pointer;
   background-color: #4e342e;
   color: white;
+  margin: 0 10px;
   font-size: 1rem;
   font-weight: 700;
-  margin: 0 10px;
   transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
 }
 
 button:hover {
@@ -76,16 +83,6 @@ button:disabled {
   cursor: initial;
 }
 
-.fa-chevron-circle-up {
-  pointer-events: none;
-  font-size: 20px;
-}
-
-#session-decrement .fa-chevron-circle-up,
-#break-decrement .fa-chevron-circle-up {
-  transform: rotateX(180deg);
-}
-
 .Session {
   display: flex;
   justify-content: center;
@@ -93,6 +90,14 @@ button:disabled {
 
 .singleSession {
   text-align: center;
+}
+
+.singleSession h1 {
+  font-size: 1.5rem;
+}
+
+.singleSession h2 {
+  font-size: 1rem;
 }
 
 .counter {
@@ -118,6 +123,7 @@ button:disabled {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .credits a {
@@ -129,8 +135,24 @@ button:disabled {
   margin-top: 5px;
 }
 
-.credits a img {
+svg {
   width: 20px;
-  height: 20px;
+  height: auto;
   margin: 0 5px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+@media (max-width: 450px) {
+  .display {
+    width: 300px;
+  }
+
+  .singleSession {
+    margin-bottom: 10px;
+  }
+
+  .Session {
+    flex-direction: column;
+  }
 }
